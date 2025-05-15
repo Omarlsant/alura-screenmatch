@@ -1,6 +1,8 @@
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
+import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
+import com.aluracursos.screenmatch.modelos.Episodio;
 
 public class Principal {
     public static void main(String[] args) {
@@ -36,6 +38,17 @@ public class Principal {
         calculadora.incluye(casaDragon);
         calculadora.incluye(otraPelicula);
         System.out.println(calculadora.getTiempoTotal());
+
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+        filtroRecomendacion.filtra(miPelicula);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("La Casa Targaryen");
+        episodio.setSerie(casaDragon);
+        episodio.setTotalVisualizaciones(50);
+
+        filtroRecomendacion.filtra(episodio);
 
     }
 }
