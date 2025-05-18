@@ -4,6 +4,8 @@ import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 import com.aluracursos.screenmatch.modelos.Episodio;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Pelicula miPelicula = new Pelicula();
@@ -47,8 +49,21 @@ public class Principal {
         episodio.setNombre("La Casa Targaryen");
         episodio.setSerie(casaDragon);
         episodio.setTotalVisualizaciones(50);
-
         filtroRecomendacion.filtra(episodio);
 
+        var peliculaDeOmar = new Pelicula();
+        peliculaDeOmar.setNombre("El Señor de los anillos");
+        peliculaDeOmar.setDuracionEnMinutos(180);
+        peliculaDeOmar.setFechaDeLanzamiento(2001);
+
+        ArrayList<Pelicula> listaPeliculas = new ArrayList<>();
+        listaPeliculas.add(peliculaDeOmar);
+        listaPeliculas.add(miPelicula);
+        listaPeliculas.add(otraPelicula);
+
+        System.out.println("Tamaño de la lista: " + listaPeliculas.size());
+        System.out.println("La primera película es: " + listaPeliculas.get(0).getNombre());
+
+        System.out.println(listaPeliculas);
     }
 }
