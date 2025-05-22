@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Ready player one");
+        Pelicula miPelicula = new Pelicula("Ready player one");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
@@ -30,8 +29,7 @@ public class Principal {
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Matrix");
+        Pelicula otraPelicula = new Pelicula("Matrix");
         otraPelicula.setFechaDeLanzamiento(1998);
         otraPelicula.setDuracionEnMinutos(180);
 
@@ -51,8 +49,7 @@ public class Principal {
         episodio.setTotalVisualizaciones(50);
         filtroRecomendacion.filtra(episodio);
 
-        var peliculaDeOmar = new Pelicula();
-        peliculaDeOmar.setNombre("El Señor de los anillos");
+        var peliculaDeOmar = new Pelicula("El Señor de los anillos");
         peliculaDeOmar.setDuracionEnMinutos(180);
         peliculaDeOmar.setFechaDeLanzamiento(2001);
 
