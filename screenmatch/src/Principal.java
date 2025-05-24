@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula("Ready player one");
+        Pelicula miPelicula = new Pelicula("Ready player one", 2021);
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
@@ -20,16 +20,14 @@ public class Principal {
         System.out.println(miPelicula.getTotalDeLasEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("La casa del dragón");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La casa del dragón", 2022);
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula("Matrix");
+        Pelicula otraPelicula = new Pelicula("Matrix", 1998);
         otraPelicula.setFechaDeLanzamiento(1998);
         otraPelicula.setDuracionEnMinutos(180);
 
@@ -49,9 +47,8 @@ public class Principal {
         episodio.setTotalVisualizaciones(50);
         filtroRecomendacion.filtra(episodio);
 
-        var peliculaDeOmar = new Pelicula("El Señor de los anillos");
+        var peliculaDeOmar = new Pelicula("El Señor de los anillos", 2001);
         peliculaDeOmar.setDuracionEnMinutos(180);
-        peliculaDeOmar.setFechaDeLanzamiento(2001);
 
         ArrayList<Pelicula> listaPeliculas = new ArrayList<>();
         listaPeliculas.add(peliculaDeOmar);
