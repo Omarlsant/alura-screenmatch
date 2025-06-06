@@ -10,7 +10,7 @@ public class PrincipalConBusqueda {
     public static void main(String[] args) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create({API_URI}))
+                .uri(URI.create("https://www.omdbapi.com/?apikey=515ca38d&i=tt3896198"))
                 .build();
 
         HttpResponse<String> response = client
